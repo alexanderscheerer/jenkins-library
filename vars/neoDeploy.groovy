@@ -93,10 +93,8 @@ def call(parameters = [:]) {
             if (!fileExists(archivePath)) {
                 error "Archive cannot be found with parameter archivePath: '${archivePath}'."
             }
-        } else {
-            error "Archive path not configured (parameter \"archivePath\")."
         }
-
+        
         def deployHost
         def deployAccount
         def credentialsId = configuration.get('neoCredentialsId')
